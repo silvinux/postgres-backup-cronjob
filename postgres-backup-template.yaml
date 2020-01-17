@@ -34,7 +34,7 @@ objects:
   - apiVersion: batch/v1beta1
     kind: CronJob
     metadata:
-      name: postgres-backup
+      name: ${DATABASE_NAME}-postgres-backup
     spec:
       schedule: ${DATABASE_BACKUP_SCHEDULE}
       concurrencyPolicy: Forbid
